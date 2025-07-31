@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    --primary-color: #FF6F61; /* Similar to the red/orange in the logo and buttons */
+    --secondary-color: #FDD835; /* Yellow accent */
+    --dark-text-color: #333333;
+    --light-text-color: #666666;
+    --white-color: #FFFFFF;
+    --light-bg-color: #F8F8F8; /* A very light grey for subtle background differences */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-text-color);
+    background-color: var(--white-color);
+    overflow-x: hidden; /* Prevent horizontal scroll due to absolute positioning */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex; /* For flexible layout of children */
+    align-items: center; /* Vertically align items */
+    justify-content: space-between; /* Space out items */
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--white-color);
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.navbar .container {
+    justify-content: space-between;
+}
+
+.navbar .logo img {
+    height: 40px;
+}
+
+.navbar .nav-links ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links ul li {
+    margin-left: 30px;
+}
+
+.navbar .nav-links ul li a {
+    text-decoration: none;
+    color: var(--dark-text-color);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links ul li a:hover {
+    color: var(--primary-color);
+}
+
+.navbar .auth-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar .login-btn {
+    background: none;
+    color: var(--dark-text-color);
+    margin-right: 10px;
+}
+
+.navbar .login-btn:hover {
+    color: var(--primary-color);
+}
+
+.navbar .request-service-btn {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.navbar .request-service-btn:hover {
+    background-color: #E65A51; /* Slightly darker red */
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    padding: 80px 0;
+    min-height: 70vh; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    background-color: var(--light-bg-color); /* Subtle background for the section */
+}
+
+.hero-section .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 550px;
+}
+
+.hero-content h1 {
+    font-size: 3.2em;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--dark-text-color);
+}
+
+.hero-content p {
+    font-size: 1.1em;
+    color: var(--light-text-color);
+    margin-bottom: 30px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.hero-actions button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1em;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-us-btn {
+    background-color: var(--dark-text-color);
+    color: var(--white-color);
+}
+
+.contact-us-btn:hover {
+    background-color: #555555;
+    transform: translateY(-2px);
+}
+
+.watch-demo-btn {
+    background: none;
+    color: var(--dark-text-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 0; /* Remove default padding as icon adds space */
+}
+
+.watch-demo-btn i {
+    font-size: 1.5em;
+    color: var(--primary-color);
+}
+
+.watch-demo-btn:hover {
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.hero-image {
+    flex: 1;
+    position: relative;
+    text-align: center;
+    padding: 20px; /* Add some padding to make room for absolute icons */
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px; /* Slight roundness as in the image */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative; /* To be above the pseudo-elements */
+    z-index: 2; /* Ensure image is above any background shapes */
+}
+
+/* Overlay icons for the hero image */
+.overlay-icon {
+    position: absolute;
+    width: 60px; /* Adjust size as needed */
+    height: 60px; /* Adjust size as needed */
+    border-radius: 15px; /* Adjust for desired square-ish with rounded corners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 3; /* Ensure icons are above the image */
+}
+
+.overlay-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px; /* Match container border-radius */
+}
+
+.icon-top-right {
+    top: 50px; /* Adjust position relative to the hero-image container */
+    right: 50px;
+    background-color: var(--secondary-color); /* Example color */
+}
+
+.icon-middle-left {
+    top: 50%;
+    left: 0px; /* Position further left */
+    transform: translateY(-50%);
+    background-color: var(--primary-color); /* Example color */
+    border-radius: 50%; /* Make it round if needed, or adjust to image */
+    width: 70px;
+    height: 70px;
+}
+
+.icon-bottom-right {
+    bottom: 20px;
+    right: 50px;
+    background-color: var(--dark-text-color); /* Example color */
+}
+
+/* Background shapes - These are illustrative and can be done with pseudo-elements or additional divs */
+/* For simplicity, I'm just showing where they might go. In a real scenario, you'd use ::before/::after on hero-section or hero-image */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 111, 97, 0.1); /* Light primary color */
+    border-radius: 30%;
+    transform: rotate(45deg);
+    z-index: 0;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    right: -80px;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(253, 216, 53, 0.1); /* Light secondary color */
+    border-radius: 50%;
+    z-index: 0;
+}
+
+/* Responsive Design (Basic) */
+@media (max-width: 992px) {
+    .hero-section .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .hero-image {
+        padding-top: 50px; /* Space for image */
+    }
+
+    .overlay-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .icon-top-right {
+        top: 0px;
+        right: 0px;
+    }
+    .icon-middle-left {
+        top: 20%;
+        left: 0px;
+    }
+    .icon-bottom-right {
+        bottom: 0px;
+        right: 0px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none; /* Hide navigation links on smaller screens */
+    }
+
+    .navbar .container {
+        justify-content: center; /* Center logo and buttons */
+    }
+
+    .navbar .auth-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar .login-btn,
+    .navbar .request-service-btn {
+        width: 100%;
+        margin: 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .hero-actions button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .hero-section {
+        padding: 40px 0;
+    }
+
+    .hero-image {
+        padding: 0;
+    }
+
+    .hero-image img {
+        width: 90%;
+    }
+}
