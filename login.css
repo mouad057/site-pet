@@ -1,0 +1,133 @@
+/* Add these styles to your existing style.css file */
+
+/* General Form Container */
+.form-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px); /* Adjust based on navbar height, if fixed */
+    background-color: var(--light-bg-color);
+    padding: 40px 20px;
+}
+
+.auth-form-card {
+    background-color: var(--white-color);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 450px; /* Max width for the form card */
+    text-align: center;
+}
+
+.auth-form-card h2 {
+    font-size: 2.5em;
+    color: var(--dark-text-color);
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.auth-form-card .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.auth-form-card label {
+    display: block;
+    font-size: 1em;
+    color: var(--dark-text-color);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.auth-form-card input[type="text"],
+.auth-form-card input[type="email"],
+.auth-form-card input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1em;
+    color: var(--dark-text-color);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-form-card input[type="text"]:focus,
+.auth-form-card input[type="email"]:focus,
+.auth-form-card input[type="password"]:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(255, 111, 97, 0.2); /* Soft primary color glow */
+    outline: none;
+}
+
+.auth-form-card .submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+}
+
+.auth-form-card .submit-btn:hover {
+    background-color: #E65A51; /* Slightly darker primary */
+    transform: translateY(-2px);
+}
+
+.auth-form-card .form-link {
+    display: block;
+    margin-top: 25px;
+    font-size: 0.95em;
+    color: var(--light-text-color);
+}
+
+.auth-form-card .form-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.auth-form-card .form-link a:hover {
+    color: var(--dark-text-color);
+}
+
+/* Error and Success Messages */
+.message {
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 0.95em;
+    font-weight: 500;
+    text-align: center;
+}
+
+.message.error {
+    background-color: #ffe0e0; /* Light red */
+    color: #cc0000; /* Dark red */
+    border: 1px solid #ffb3b3;
+}
+
+.message.success {
+    background-color: #e0ffe0; /* Light green */
+    color: #008000; /* Dark green */
+    border: 1px solid #b3ffb3;
+}
+
+/* Responsive adjustments for form */
+@media (max-width: 576px) {
+    .auth-form-card {
+        padding: 30px 20px;
+        margin: 0 15px;
+    }
+
+    .auth-form-card h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,188 @@
+/* Add these styles to your existing style.css file */
+
+/* Service Page Specific Styles */
+
+.service-hero {
+    background-color: var(--light-bg-color); /* Light grey background */
+    padding: 80px 0;
+    text-align: center;
+}
+
+.service-hero h1 {
+    font-size: 3.2em;
+    font-weight: 700;
+    color: var(--dark-text-color);
+    margin-bottom: 20px;
+}
+
+.service-hero p {
+    font-size: 1.1em;
+    color: var(--light-text-color);
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    padding: 60px 0; /* Padding for the section itself */
+}
+
+.service-item {
+    background-color: var(--white-color);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.service-icon {
+    font-size: 3.5em; /* Large icon size */
+    color: var(--primary-color); /* Primary color for icons */
+    margin-bottom: 20px;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 111, 97, 0.1); /* Very light primary background */
+    border-radius: 50%; /* Circular background for icon */
+}
+
+.service-item h3 {
+    font-size: 1.8em;
+    color: var(--dark-text-color);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.service-item p {
+    font-size: 1em;
+    color: var(--light-text-color);
+    line-height: 1.6;
+    flex-grow: 1; /* Allows paragraphs to take available space */
+}
+
+.service-item .learn-more-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 25px;
+    background-color: var(--dark-text-color);
+    color: var(--white-color);
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.service-item .learn-more-btn:hover {
+    background-color: #555555;
+    transform: translateY(-2px);
+}
+
+/* Featured Service / CTA Section */
+.cta-section {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.cta-section p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-section .cta-button {
+    display: inline-block;
+    padding: 18px 40px;
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.cta-section .cta-button:hover {
+    background-color: #f0f0f0;
+    color: #CC4F44; /* Slightly darker primary */
+    transform: translateY(-3px);
+}
+
+
+/* Responsive adjustments for Service page */
+@media (max-width: 992px) {
+    .service-hero h1 {
+        font-size: 2.8em;
+    }
+    .service-item {
+        padding: 25px;
+    }
+    .service-item h3 {
+        font-size: 1.6em;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-hero {
+        padding: 60px 0;
+    }
+    .service-hero h1 {
+        font-size: 2.2em;
+    }
+    .service-hero p {
+        font-size: 1em;
+    }
+    .service-grid {
+        grid-template-columns: 1fr; /* Stack items on small screens */
+        padding: 40px 20px;
+    }
+    .service-item {
+        padding: 20px;
+    }
+    .service-item h3 {
+        font-size: 1.4em;
+    }
+    .cta-section h2 {
+        font-size: 2em;
+    }
+    .cta-section p {
+        font-size: 1em;
+    }
+    .cta-section .cta-button {
+        padding: 15px 30px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-icon {
+        font-size: 3em;
+        width: 80px;
+        height: 80px;
+    }
+}
