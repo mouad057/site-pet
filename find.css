@@ -1,0 +1,417 @@
+/* Add these styles to your existing style.css file */
+
+/* Find Favpet Page Specific Styles */
+
+.find-favpet-hero {
+    background-color: var(--light-bg-color); /* Light grey background */
+    padding: 60px 0;
+    text-align: center;
+}
+
+.find-favpet-hero h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+    color: var(--dark-text-color);
+    margin-bottom: 15px;
+}
+
+.find-favpet-hero p {
+    font-size: 1.1em;
+    color: var(--light-text-color);
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-bar-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    margin-bottom: 50px;
+}
+
+.search-bar-container input[type="text"],
+.search-bar-container select {
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-size: 1em;
+    flex-grow: 1; /* Allow input to grow */
+    max-width: 300px; /* Limit individual input width */
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar-container input[type="text"]:focus,
+.search-bar-container select:focus {
+    border-color: var(--primary-color);
+}
+
+.search-bar-container button {
+    padding: 15px 30px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 30px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search-bar-container button:hover {
+    background-color: #E65A51; /* Slightly darker red */
+    transform: translateY(-2px);
+}
+
+/* Filter Section */
+.filter-section {
+    background-color: var(--white-color);
+    padding: 30px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.filter-section .container {
+    justify-content: center; /* Center filters */
+    flex-wrap: wrap; /* Allow filters to wrap */
+    gap: 20px;
+}
+
+.filter-button {
+    padding: 10px 20px;
+    border: 1px solid var(--light-text-color);
+    border-radius: 25px;
+    background-color: var(--white-color);
+    color: var(--dark-text-color);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.filter-button.active,
+.filter-button:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-color: var(--primary-color);
+}
+
+/* Results Section */
+.results-section {
+    padding: 60px 0;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background-color: var(--white-color);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 1.5em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 0.95em;
+    color: var(--light-text-color);
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+    color: var(--dark-text-color);
+    margin-top: 15px;
+}
+
+.card-meta .rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.card-meta .rating i {
+    color: #FFD700; /* Gold for stars */
+}
+
+.card-meta .location i {
+    margin-right: 5px;
+    color: var(--primary-color);
+}
+
+.card-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card-actions .view-profile-btn {
+    padding: 10px 20px;
+    background-color: var(--dark-text-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.card-actions .view-profile-btn:hover {
+    background-color: #555555;
+}
+
+/* Map Section (Optional) */
+.map-section {
+    padding: 60px 0;
+    background-color: #F0F2F5; /* A slightly darker light background */
+    text-align: center;
+}
+
+.map-section h2 {
+    font-size: 2.2em;
+    color: var(--dark-text-color);
+    margin-bottom: 30px;
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 400px;
+    background-color: #ccc;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 1.2em;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* Responsive Adjustments for Find Favpet */
+@media (max-width: 768px) {
+    .find-favpet-hero h1 {
+        font-size: 2.2em;
+    }
+
+    .find-favpet-hero p {
+        font-size: 1em;
+    }
+
+    .search-bar-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .search-bar-container input[type="text"],
+    .search-bar-container select,
+    .search-bar-container button {
+        max-width: 90%; /* Make inputs wider on small screens */
+        width: 100%;
+    }
+
+    .filter-section .container {
+        justify-content: flex-start; /* Align filters left if they wrap */
+        padding: 0 15px;
+    }
+
+    .results-grid {
+        grid-template-columns: 1fr; /* Stack cards on very small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card img {
+        height: 150px;
+    }
+
+    .card-content h3 {
+        font-size: 1.3em;
+    }
+}
+/* --- CSS for the Navbar Design (matching your first photo) --- */
+
+/* Basic body and container setup (essential for navbar alignment) */
+body {
+    font-family: 'Poppins', sans-serif; /* Ensure Poppins font is imported */
+    line-height: 1.6;
+    color: #333333; /* dark-text-color equivalent */
+    background-color: #FFFFFF; /* white-color equivalent */
+    margin: 0; /* Reset default body margin */
+    padding: 0; /* Reset default body padding */
+}
+
+/* Define key colors for easy management */
+:root {
+    --primary-color: #FF6F61; /* Similar to the red/orange in the logo and buttons */
+    --dark-text-color: #333333;
+    --light-text-color: #666666;
+    --white-color: #FFFFFF;
+}
+
+/* Generic container for content width and centering */
+.container {
+    max-width: 1200px; /* Max width of your content */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Horizontal padding for smaller screens */
+    display: flex; /* Use flexbox for horizontal alignment */
+    align-items: center; /* Vertically align items in the middle */
+    justify-content: space-between; /* Space out items (logo, nav, buttons) */
+}
+
+/* Navbar container */
+.navbar {
+    background-color: var(--white-color); /* White background */
+    padding: 15px 0; /* Vertical padding */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Subtle bottom shadow */
+    width: 100%; /* Full width */
+    position: sticky; /* Makes the navbar stick to the top */
+    top: 0;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Logo styling */
+.navbar .logo img {
+    height: 40px; /* Height of the logo image */
+    display: block; /* Remove extra space below image */
+}
+
+/* Navigation links container */
+.navbar .nav-links ul {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Arrange links horizontally */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links ul li {
+    margin-left: 30px; /* Space between navigation items */
+}
+
+.navbar .nav-links ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: var(--dark-text-color); /* Link color */
+    font-weight: 600; /* Semibold font weight */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+    padding: 5px 0; /* Small vertical padding for hover area */
+    position: relative; /* For potential underline effect on hover/active */
+}
+
+.navbar .nav-links ul li a:hover,
+.navbar .nav-links ul li a.active { /* 'active' class for current page */
+    color: var(--primary-color); /* Change color on hover/active */
+}
+
+/* Authentication buttons container */
+.navbar .auth-buttons {
+    display: flex; /* Arrange buttons horizontally */
+    gap: 10px; /* Space between buttons */
+}
+
+.navbar .auth-buttons button {
+    padding: 10px 20px; /* Padding inside buttons */
+    border: none; /* Remove default button border */
+    border-radius: 25px; /* Fully rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-weight: 600; /* Semibold font weight */
+    font-size: 1em; /* Standard font size */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    white-space: nowrap; /* Prevent text wrapping inside buttons */
+}
+
+/* Login button specific styles */
+.navbar .login-btn {
+    background: none; /* Transparent background */
+    color: var(--dark-text-color); /* Text color */
+}
+
+.navbar .login-btn:hover {
+    color: var(--primary-color); /* Change text color on hover */
+    transform: translateY(-1px); /* Slight lift on hover */
+}
+
+/* Request Service button specific styles */
+.navbar .request-service-btn {
+    background-color: var(--primary-color); /* Primary background color */
+    color: var(--white-color); /* White text color */
+}
+
+.navbar .request-service-btn:hover {
+    background-color: #E65A51; /* Slightly darker primary color on hover */
+    transform: translateY(-1px); /* Slight lift on hover */
+}
+
+/* --- Responsive Adjustments for Navbar --- */
+
+
+
+    /* Center logo and buttons when nav links are hidden */
+    .navbar .container {
+        justify-content: space-between; /* Keep space between logo and buttons */
+    }
+
+    /* Stack buttons vertically if space is very limited */
+    .navbar .auth-buttons {
+        flex-direction: row; /* Keep them row by default, but adjust if needed */
+        gap: 5px; /* Reduce gap */
+    }
+
+    .navbar .auth-buttons button {
+        padding: 8px 15px; /* Smaller padding for buttons */
+        font-size: 0.9em;
+    }
+
+    .navbar .login-btn {
+        margin-right: 0; /* Remove extra margin */
+    }
+
+
+@media (max-width: 480px) {
+    .navbar .logo img {
+        height: 35px; /* Smaller logo on very small screens */
+    }
+
+    .navbar .container {
+        padding: 0 15px; /* Reduce container padding */
+    }
+
+    .navbar .auth-buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: flex-end; /* Align buttons to the right */
+        gap: 8px; /* Space between stacked buttons */
+    }
+
+    .navbar .auth-buttons button {
+        width: auto; /* Allow buttons to size to content */
+    }
+}
